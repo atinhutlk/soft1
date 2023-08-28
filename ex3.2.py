@@ -13,5 +13,7 @@ elif a == 'A':
     print('above the car deck, equipped with a window')
 elif a == 'B':
     print('windowless cabin above the car deck')
-else:
+elif a =='C':
     print('windowless cabin below the car deck')
+else:
+    print('Invalid cabin class')
