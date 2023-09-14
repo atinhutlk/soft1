@@ -11,6 +11,7 @@ def removeOdd(lst):
             i += 1
 
 numlist = []
+
 while True:
     number =input('Enter number or Enter to Run: ')
     if number == '':
@@ -18,5 +19,7 @@ while True:
     else:
         number = int(number)
         numlist.append(number)
+
+print(f'The Original list : ', numlist)
 removeOdd(numlist)
-print(numlist)
+print(f'The New List: ', numlist)
