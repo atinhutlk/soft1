@@ -135,7 +135,6 @@ while True:
     choice = input('Please choose: ')
 
     if choice == '1':
-        # print wrapped string line by line
         for line in story.getStory():
             print(line, end='')
         continue
