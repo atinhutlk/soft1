@@ -8,16 +8,16 @@ price of two pizzas and tells the user which pizza provides better value for mon
 def calculateUP(diameter, price):
     radius = diameter/200
     area = 3.14159 * (radius ** 2)
-    ans = price/radius
+    ans = price/area
     return ans
 
 diameter1 = float(input('Diameter of the 1st pizza: '))
-price1 = float(input('Price of the 1st pizaa: '))
+price1 = float(input('Price of the 1st pizza: '))
 diameter2 = float(input('Diameter of the 2nd pizza: '))
-price2 = float(input('Price of the 2nd pizaa: '))
+price2 = float(input('Price of the 2nd pizza: '))
 
-pizza1 = calculateUP(diameter1,price1)
-pizza2 = calculateUP(diameter2,price2)
+pizza1 = calculateUP(diameter1, price1)
+pizza2 = calculateUP(diameter2, price2)
 
 if pizza1 < pizza2:
     print(f'The first pizza is the better deal')
