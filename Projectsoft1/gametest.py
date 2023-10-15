@@ -1,7 +1,6 @@
 import mysql.connector
 import random
 from geopy import distance
-
 import story
 
 conn = mysql.connector.connect(
@@ -129,19 +128,19 @@ print('Welcome to play : NATIONAL TREASURE')
 while True:
     print('\n')
     print('      MENU ')
-    print('     1.Story ')
-    print('     2.Start ')
+    print('     1.Start ')
+    print('     2.Story ')
     print('      Exit(E)')
     choice = input('Please choose: ')
 
-    if choice == '1':
+    if choice == '2':
         for line in story.getStory():
             print(line, end='')
         continue
     elif choice == 'E':
         print('See You!')
         break
-    elif choice == '2':
+    elif choice == '1':
 
         # GAME SETTINGS
         print('When you are ready to start, ')
@@ -242,8 +241,8 @@ while True:
                 print(f'''You won! You have {money}EURO and {player_range}km of range left.''')
                 game_over = True
 
-    print(f'''{'You won!' if win else 'You lost!'}''')
-    print(f'''You have {money:.0f}EURO''')
-    print(f'''Your range is {player_range:.0f}km''')
-    break
+        print(f'''{'You won!' if win else 'You lost!'}''')
+        print(f'''You have {money:.0f}EURO''')
+        print(f'''Your range is {player_range:.0f}km''')
+        break
 
